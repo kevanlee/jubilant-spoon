@@ -16,7 +16,6 @@ body {
 }
 img { max-width: 100%; }
 
-
 /* header */
 
 
@@ -86,9 +85,9 @@ img { max-width: 100%; }
   }
 
       /* Buttons */
+
       .button { background-color: #2c4bff; color: #ffffff; text-decoration: none; padding: 17px; min-width: 180px; display: inline-block; text-align: center;}
       .button:hover { background-color: #FFEFD4; color: #000; transition:0.2s}
-      #content .button { margin: 50px 0;}
       .secondary { background-color: #ffffff; border: 2px solid #000000; color: #000000; }
       .secondary:hover { background-color: #ffefd4; }
       .small { padding: 12px; font-size: 14px; min-width: 100px; }
@@ -101,11 +100,25 @@ img { max-width: 100%; }
 .article-content { padding-top: 20px; line-height: 1.8; text-align: left; font-size: 0.8em; }
 .post-meta { font-size: 0.8em; color: #9999a1; text-align: left;  }
 .post-meta a { color: #9999a1; text-decoration: none; }
+  .post-meta a:hover { text-decoration: underline; }
 .featured-image { margin-top: 40px; max-width: 400px; }
 blockquote.special { padding: 30px 50px; background-color: #FFEFD4; margin-left: 0; margin-top: 40px;  }
 cite { font-size: 0.8em; color: #9999a1; font-style: normal; margin-left: 20px; display: block; margin-bottom: 40px; }
 #content .article-content .button { margin: 30px 0; }
 .full-width { width: 120%; margin-left: -10%; max-width: 120%; margin-top: 20px; }
+
+.article-content a { color: #2c4bff; text-decoration: none; font-weight: 500; }
+.article-content a.button { color: #ffffff; font-weight: 400; }
+.article-content a.secondary { color: #000000; font-weight: 400; }
+
+    .article-content a:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .article-content a.button:hover, .article-content a.button:hover {
+      text-decoration: none; color: #000;
+    }
+
 
 @media screen and (min-width: 37.5em) {
 	#content h1 { font-size: 2.5em; }
@@ -144,6 +157,16 @@ input {border: 0; }
 .slides-in .special {  margin: 40px 0 20px 0; color: #000; }
 .cd-slider a.outline { background-color: #FFEFD4; color: #000000; padding: 6px 12px; display:inline;  }
 
+/* Archive */
+
+#content.archive h1, #content.archive .post-meta { text-align: center; }
+#content.archive .post-meta { width: 75%; margin: 0 auto; }
+.archive-content { margin-top: 50px; }
+.archive-content .entry { width: 75%; margin: 20px auto; padding: 20px 0; border-bottom: 1px solid #dedede; }
+  .archive-content .entry:last-child { border-bottom: none; }
+.archive-content .entry h2 { text-align: left; line-height: 1.4; }
+.archive-content .entry .special, .archive-content .entry cite { text-align: left; }
+.archive-content .entry .archive-thumbnail { max-width: 150px; height: auto; float: left; margin-right: 40px; }
 
 /* Footer */
 
