@@ -136,19 +136,19 @@ cite { font-size: 0.8em; color: #9999a1; font-style: normal; margin-left: 20px; 
 
 /* Comments */
 
-.comments { max-width: 550px; margin: 50px auto; text-align: left; color: #9999A1; }
+.comments { max-width: 550px; margin: 100px auto; text-align: left;  }
 .comment-avatar { width: 30px; height: 30px; vertical-align: middle; }
 .comment-name, .comment-timestamp { font-size: 14px; }
 #content .comment-form { margin: 30px 0; }
 #content .comment-form .button { margin: 0; }
 .comment-form .text-area, .comment-form .email { background-color: #e6e6e9; color: #000; border-radius: 0; display: block; padding: 17px; margin-bottom: 20px; font-size: 14px;  }
-.comment-form .text-area { min-height: 100px; width: 80%; }
-.comment-form .email { width: 80%; }
+.comment-form .text-area { min-height: 100px; width: 100%; border: 0; }
+.comment-form .email { width: 100%; }
 input {border: 0; }
+.comment-form .button { cursor: pointer; }
 
 @media screen and (min-width: 37.5em) {
-  .comment-form .text-area { min-height: 100px; width: 80%; }
-  .comment-form .email { width: 50%; }
+
 }
 
 
@@ -162,9 +162,9 @@ input {border: 0; }
 #content.archive h1, #content.archive .post-meta { text-align: center; }
 #content.archive .post-meta { width: 75%; margin: 0 auto; }
 .archive-content { margin-top: 50px; }
-.archive-content .entry { width: 75%; margin: 20px auto; padding: 20px 0; border-bottom: 1px solid #dedede; }
+.archive-content .entry { width: 75%; margin: 20px auto; padding: 20px 0; border-bottom: 1px solid #dedede; clear: both; }
   .archive-content .entry:last-child { border-bottom: none; }
-.archive-content .entry h2 { text-align: left; line-height: 1.4; }
+.archive-content .entry h2 { text-align: left; line-height: 1.4; font-weight: 500; }
 .archive-content .entry .special, .archive-content .entry cite { text-align: left; }
 .archive-content .entry .archive-thumbnail { max-width: 150px; height: auto; float: left; margin-right: 40px; }
 
@@ -196,3 +196,14 @@ input {border: 0; }
 		padding: 60px;
 		box-shadow: 0 0 90px 10px rgba(95, 124, 179, 0.15);
 	}
+
+
+/* Featured header (big header) */
+
+.big-header {
+  background: #2c4bff;
+  height: 375px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
