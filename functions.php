@@ -134,19 +134,9 @@ function punt_scripts() {
 add_action( 'wp_enqueue_scripts', 'punt_scripts' );
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
 
 /**
  * Customizer additions.
@@ -159,3 +149,17 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+function punt_post_formats_setup() {
+    add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+}
+add_action( 'after_setup_theme', 'punt_post_formats_setup' );
+
+function punt_custom_post_formats_setup() {
+    // add post-formats to post_type 'page'
+    add_post_type_support( 'page', 'post-formats' );
+
+    // add post-formats to post_type 'my_custom_post_type'
+    add_post_type_support( 'my_custom_post_type', 'post-formats' );
+}
+add_action( 'init', 'punt_custom_post_formats_setup' );
