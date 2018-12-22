@@ -87,6 +87,10 @@ Projects Slider
   #content.bottom { margin-top: 600px; }
 }
 
+@media screen and (min-width: 77.5em) {
+  .cd-projects-wrapper { height: 800px; }
+}
+
 
 .cd-projects-wrapper::before {
   /* never visible - this is used in jQuery to check the current MQ */
@@ -145,7 +149,7 @@ Projects Slider
   width: 100%;
   text-decoration: none;
 }
-	.cd-slider a:hover { opacity: 0.5;  }
+	.cd-slider a:hover { opacity: 0.7;  }
 
 .cd-slider img {
   display: block;
@@ -558,7 +562,7 @@ Project slider navigation
   height: 60px;
   width: 4%;
   background: url(../img/cd-arrow.svg) no-repeat center center;
-	background-color: #2c4bff; 
+	background-color: #2c4bff;
   -webkit-transition: opacity 0.2s 0s, visibility 0s 0s;
   -moz-transition: opacity 0.2s 0s, visibility 0s 0s;
   transition: opacity 0.2s 0s, visibility 0s 0s;
